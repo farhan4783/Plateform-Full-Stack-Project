@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <br>
             <h2>Address</h2>
             <p>
-            Taaza restaurant, Stadium Link Rd, Kathrikadavu<br>
+            Plateform restaurant, Stadium Link Rd, Kathrikadavu<br>
             Kaloor, Kochi, Ernakulam <br>
             Kerala 682017
             </p>
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h2 style="font-size:30px">Contact Details</h2>
             <p class="hero-text">
             MOBILE: +91 7558 9513 51 | TELEPHONE: 0484-292674<br>
-            EMAIL : taaza0restaurant@gmail.com<br>
+            EMAIL : plateform0restaurant@gmail.com<br>
             </p>
             <br>
       <form action="" class="contact-form" method="POST">

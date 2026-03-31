@@ -27,14 +27,14 @@ session_start();
 
         <div class="about-right">
 
-          <h2 class="section-title">About Taaza</h2>
+          <h2 class="section-title">About Plateform</h2>
 
           <p class="section-text">
-            Taaza, derived from the word "fresh" in many languages, embodies our commitment to serving you the freshest and most delectable dishes. We've carefully curated a menu that reflects our passion for culinary excellence. Whether you're seeking the comfort of traditional flavors or the excitement of modern cuisine, Taaza is your trusted partner in the world of food. We have a variety of tastes from the traditional ones to the chinese and arabic. Taaza will be your best when it comes to food and enjoyment.
+            Plateform, derived from the word "fresh" in many languages, embodies our commitment to serving you the freshest and most delectable dishes. We've carefully curated a menu that reflects our passion for culinary excellence. Whether you're seeking the comfort of traditional flavors or the excitement of modern cuisine, Plateform is your trusted partner in the world of food. We have a variety of tastes from the traditional ones to the chinese and arabic. Plateform will be your best when it comes to food and enjoyment.
           </p>
 
           <p class="section-text">
-            "At Taaza, we offer a comprehensive range of services designed to elevate your dining experience. Whether you're in the mood for delicious food from your house, the dish will be delivered to your doorstep, planning a special event and need the perfect venue - we will provide you the best dishes and catering services, prefer the classic restaurant experience with table booking, or require catering services for your off-site gatherings, Taaza has you covered. Our commitment to excellence extends to constantly innovating and surprising our customers with special promotions, seasonal menus, and exciting culinary events. Join us at Taaza, where every service we provide is aimed at exceeding your expectations and making every moment a memorable one."
+            "At Plateform, we offer a comprehensive range of services designed to elevate your dining experience. Whether you're in the mood for delicious food from your house, the dish will be delivered to your doorstep, planning a special event and need the perfect venue - we will provide you the best dishes and catering services, prefer the classic restaurant experience with table booking, or require catering services for your off-site gatherings, Plateform has you covered. Our commitment to excellence extends to constantly innovating and surprising our customers with special promotions, seasonal menus, and exciting culinary events. Join us at Plateform, where every service we provide is aimed at exceeding your expectations and making every moment a memorable one."
           </p>
         </div>
 </section>
@@ -46,7 +46,7 @@ session_start();
         <div class="about-right">
           <h2 class="section-title">Mission Statement</h2>
           <p class="section-text">
-            Our mission at Taaza is simple yet profound: to create memorable food experiences that touch the heart. We aim to elevate your dining adventures, ensuring that every meal you enjoy with us leaves a lasting impression. Through our services, we seek to connect people, celebrate flavors, and make your moments special. We are not just a restaurent, we tries our best to  provide the best services we can give to you.
+            Our mission at Plateform is simple yet profound: to create memorable food experiences that touch the heart. We aim to elevate your dining adventures, ensuring that every meal you enjoy with us leaves a lasting impression. Through our services, we seek to connect people, celebrate flavors, and make your moments special. We are not just a restaurent, we tries our best to  provide the best services we can give to you.
           </p>
 
           <p class="section-text">
@@ -95,11 +95,11 @@ session_start();
           <h2 class="section-title">History</h2>
 
           <p class="section-text">
-            Taaza was founded in Kochi by a group of food enthusiasts, a seasoned chef with a vision to redefine dining experiences. Since our establishment in 2020, we've embarked on a journey of culinary exploration, continuously striving for excellence. Over the years, we've achieved significant milestones, including donation more than 2 lakh food packages, served more than 10 lakh+ customers in our restaurent and provided service in 10k+ events.
+            Plateform was founded in Kochi by a group of food enthusiasts, a seasoned chef with a vision to redefine dining experiences. Since our establishment in 2020, we've embarked on a journey of culinary exploration, continuously striving for excellence. Over the years, we've achieved significant milestones, including donation more than 2 lakh food packages, served more than 10 lakh+ customers in our restaurent and provided service in 10k+ events.
           </p>
 
           <p class="section-text">
-            "Taaza was born out of a desire to transform ordinary meals into extraordinary experiences. We observed a need for a platform where people could savor exceptional food, whether dining in or enjoying it at home. Our goal is to make every meal special, regardless of the occasion."
+            "Plateform was born out of a desire to transform ordinary meals into extraordinary experiences. We observed a need for a platform where people could savor exceptional food, whether dining in or enjoying it at home. Our goal is to make every meal special, regardless of the occasion."
           </p>
         </div>
 </section>
@@ -113,11 +113,11 @@ session_start();
           <p class="section-text">
             <b>Food Delivery:</b> Our efficient food delivery service brings restaurant-quality meals to your doorstep. Track your order in real-time and provide feedback to help us serve you better.<br><br>
 
-            <b>Table Booking:</b> With Taaza, reserving a table at your favorite restaurant and room is a breeze. Enjoy a seamless dining experience with your preferred table waiting for you.<br><br>
+            <b>Table Booking:</b> With Plateform, reserving a table at your favorite restaurant and room is a breeze. Enjoy a seamless dining experience with your preferred table waiting for you.<br><br>
 
-            <b>Event Catering:</b> Trust Taaza to make your special occasions truly exceptional. Our catering services are designed to delight your guests, leaving a lasting impression.<br><br>
+            <b>Event Catering:</b> Trust Plateform to make your special occasions truly exceptional. Our catering services are designed to delight your guests, leaving a lasting impression.<br><br>
 
-            <b>Premium Membership:</b> Become a Taaza premium member and enjoy exclusive discounts on dining and special promotions. Elevate your dining experience with us.<br><br>
+            <b>Premium Membership:</b> Become a Plateform premium member and enjoy exclusive discounts on dining and special promotions. Elevate your dining experience with us.<br><br>
 
             <b>Menu Display:</b> Explore our diverse menu offerings, thoughtfully presented on our website. Discover culinary treasures that await your taste buds.<br><br>
 
@@ -127,7 +127,7 @@ session_start();
           </p>
 
           <p class="section-text">
-            "As we journey together, we express our gratitude for choosing Taaza. We invite you to explore our website, discover exciting new flavors, and join us in making every meal a memorable one. Thank you for being a part of the Taaza family."
+            "As we journey together, we express our gratitude for choosing Plateform. We invite you to explore our website, discover exciting new flavors, and join us in making every meal a memorable one. Thank you for being a part of the Plateform family."
           </p>
         </div>
 

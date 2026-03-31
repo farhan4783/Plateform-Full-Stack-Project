@@ -14,7 +14,7 @@ class PDF extends FPDF {
     }
 }
 
-$conn = new mysqli("localhost", "root", "", "taaza_db");
+$conn = new mysqli("localhost", "root", "", "plateform_db");
 
 // Check connection
 if ($conn->connect_error) {
@@ -81,7 +81,7 @@ if ($bookingStmt) {
                 $pdf->SetTextColor(0, 128, 0);
 
                 // Title
-                $pdf->Cell(0, 10, 'TAAZA RESTAURANT', 1, 1, 'C');
+                $pdf->Cell(0, 10, 'PLATEFORM RESTAURANT', 1, 1, 'C');
 
                 // Reset text color to black
                 $pdf->SetTextColor(0);
@@ -118,8 +118,8 @@ if ($bookingStmt) {
                 // Add a line break before the date and time
                 $pdf->Ln(10);
 
-                $pdf->Cell(0, 10, 'Taaza Email: taaza0restaurant@gmail.com', 1, 1, 'C');
-                $pdf->Cell(0, 10, 'Taaza Phone: +91 7558 95 1351', 1, 1, 'C');
+                $pdf->Cell(0, 10, 'Plateform Email: plateform0restaurant@gmail.com', 1, 1, 'C');
+                $pdf->Cell(0, 10, 'Plateform Phone: +91 7558 95 1351', 1, 1, 'C');
                 // Add current date and time
                 $pdf->Cell(0, 10, 'Printed on: ' . date('Y-m-d H:i:s'), 0, 1, 'C');
 
@@ -127,7 +127,7 @@ if ($bookingStmt) {
                 $pdf->SetFont('Arial', '', 9);
 
                 // Add restaurant address
-                $pdf->Cell(0, 10, 'Taaza restaurant, Stadium Link Rd, Kathrikadavu, Kaloor, Kochi, Ernakulam, Kerala 682017', 0, 1, 'C');
+                $pdf->Cell(0, 10, 'Plateform restaurant, Stadium Link Rd, Kathrikadavu, Kaloor, Kochi, Ernakulam, Kerala 682017', 0, 1, 'C');
 
                 // Output the PDF (you can choose to save or display)
                 if (isset($bookingData['id'])) {

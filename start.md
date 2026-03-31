@@ -1,6 +1,6 @@
-# 🚀 How to Run the "Project-Taaza" Website Locally
+# 🚀 How to Run the "Project-Plateform" Website Locally
 
-Welcome to **Project-Taaza**! This guide will help you set up and run the restaurant website on your local machine using a local web server environment (like XAMPP, WAMP, or MAMP).
+Welcome to **Project-Plateform**! This guide will help you set up and run the restaurant website on your local machine using a local web server environment (like XAMPP, WAMP, or MAMP).
 
 ## 🛠 Prerequisites
 
@@ -11,6 +11,7 @@ Before starting, ensure you have the following installed on your system:
 
 ---
 
+
 ## 🏃‍♂️ Step-by-Step Setup Guide
 
 ### Step 1: Start your Local Server
@@ -19,7 +20,7 @@ Before starting, ensure you have the following installed on your system:
 
 ### Step 2: Place the Project in the Correct Directory
 1. If you haven't already, clone or extract the downloaded project folder.
-2. Move the entire `Project-Taaza-main` folder into the main directory of your local server:
+2. Move the entire `Project-Plateform-main` folder into the main directory of your local server:
    - For **XAMPP**: Move to `C:\xampp\htdocs\`
    - For **WAMP**: Move to `C:\wamp\www\`
    - For **MAMP**: Move to `C:\MAMP\htdocs\` (on Windows) or `/Applications/MAMP/htdocs/` (on Mac)
@@ -29,9 +30,9 @@ The project requires a MySQL database to function properly.
 
 1. Open your browser and go to `http://localhost/phpmyadmin/`.
 2. Click on the **Databases** tab at the top.
-3. Under "Create database", enter the name: `taaza_db`.
+3. Under "Create database", enter the name: `plateform_db`.
 4. Click **Create**.
-5. Select `taaza_db` from the left sidebar to open it.
+5. Select `plateform_db` from the left sidebar to open it.
 6. Now, you need to execute the SQL queries to create the necessary tables. You have two options:
    
    **Option A: Run Queries manually**  
@@ -151,13 +152,13 @@ If you have configured a different setup, you'll need to update it:
    $servername = "localhost";
    $username = "root";  // Change if your MySQL username is different
    $password = "";      // Enter your MySQL password here if you have one
-   $dbname = "taaza_db";
+   $dbname = "plateform_db";
    ```
 
 ### Step 5: Run the Project
 1. Open your web browser.
-2. In the address bar, depending on your folder's name, type `http://localhost/Project-Taaza-main`
-3. Hit Enter! The "Taaza" website home page will load successfully.
+2. In the address bar, depending on your folder's name, type `http://localhost/Project-Plateform-main`
+3. Hit Enter! The "Plateform" website home page will load successfully.
 
 ---
 

@@ -23,15 +23,15 @@ function sendOrderDeletedEmail($userEmail)
         $mail->Port       = 465;
 
         // Sender information
-        $mail->setFrom('YourEmail@gmail.com', 'Taaza Restaurant');
+        $mail->setFrom('YourEmail@gmail.com', 'Plateform Restaurant');
 
         // Recipient
         $mail->addAddress($userEmail);
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'Order Deletion Notification - Taaza';
-        $mail->Body    = "Dear Customer,<br><br>Your order has been deleted due to an emergency condition. Your money will be refunded shortly.<br><br>Thank you for understanding.<br><br>Best Regards,<br>Taaza Restaurant";
+        $mail->Subject = 'Order Deletion Notification - Plateform';
+        $mail->Body    = "Dear Customer,<br><br>Your order has been deleted due to an emergency condition. Your money will be refunded shortly.<br><br>Thank you for understanding.<br><br>Best Regards,<br>Plateform Restaurant";
 
         // Disable SSL certificate verification
         $mail->SMTPOptions = array(

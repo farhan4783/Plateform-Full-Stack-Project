@@ -23,15 +23,15 @@ function sendFeedbackDeletedEmail($userEmail, $userName)
         $mail->Port       = 465;
 
         // Sender information
-        $mail->setFrom('YourEmail@gmail.com', 'Taaza Restaurant');
+        $mail->setFrom('YourEmail@gmail.com', 'Plateform Restaurant');
 
         // Recipient
         $mail->addAddress($userEmail);
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'Feedback Deletion Notification - Taaza';
-        $mail->Body    = "Dear $userName,<br><br>Thanks for your feedback. We have read your feedback, and we appreciate your dedication. We will take care of your feedback.<br><br>Continue your bond with Taaza Restaurant.<br><br>Best Regards,<br>Taaza Restaurant";
+        $mail->Subject = 'Feedback Deletion Notification - Plateform';
+        $mail->Body    = "Dear $userName,<br><br>Thanks for your feedback. We have read your feedback, and we appreciate your dedication. We will take care of your feedback.<br><br>Continue your bond with Plateform Restaurant.<br><br>Best Regards,<br>Plateform Restaurant";
 
         // Disable SSL certificate verification
         $mail->SMTPOptions = array(

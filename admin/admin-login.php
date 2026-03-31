@@ -1,7 +1,7 @@
 <?php
 include_once '../includes/connection.php';
 session_start();
-define("APPURL", "http://localhost/taaza");
+define("APPURL", "http://localhost:8000");
 ?>
 
 <?php
@@ -64,11 +64,11 @@ if(isset($_POST['login']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taaza</title>
+    <title>Plateform</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="../assets/css/taaza.css">
+    <link rel="stylesheet" href="../assets/css/plateform.css">
     <link rel="stylesheet" href="../assets/css/media_query.css">
 
     <!-- google font link -->
@@ -242,13 +242,13 @@ if(isset($_POST['login']))
                                 <ion-icon name="logo-youtube"></ion-icon>
                             </a>
                         </div>
-                        <p class="copyright">&copy; Copyright 2024 Taaza. All Rights Reserved.</p>
+                        <p class="copyright">&copy; Copyright 2024 Plateform. All Rights Reserved.</p>
                     </div>
                 </footer>
     </div>
 
     <!--custom js link -->
-    <script src="../assets/js/taaza.js"></script>
+    <script src="../assets/js/plateform.js"></script>
 
     <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

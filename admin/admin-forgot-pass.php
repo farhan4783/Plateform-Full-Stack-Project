@@ -25,17 +25,17 @@ function sendMail($email,$reset_token)
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('YourEmail@gmail.com', 'Taaza Restaurant');
+    $mail->setFrom('YourEmail@gmail.com', 'Plateform Restaurant');
     $mail->addAddress('RecipientEmail@gmail.com');     //Add a recipient
 
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Password reset - Taaza';
+    $mail->Subject = 'Password reset - Plateform';
     $mail->Body    = "<b style='color:blue'>We got a request from you to reset your password !</b><br>
     Click the button below to reset your password<br>
-    <a href='http://localhost/taaza/admin/reset_pass.php?email=$email&reset_token=$reset_token'>Reset password</a>
-    <br><p style='color:red'>Enjoy our services, hearty welcome from Taaza</p>
+    <a href='http://localhost:8000/admin/reset_pass.php?email=$email&reset_token=$reset_token'>Reset password</a>
+    <br><p style='color:red'>Enjoy our services, hearty welcome from Plateform</p>
    ";
    // Disable SSL certificate verification, because error occured for me
    $mail->SMTPOptions = array(
@@ -116,11 +116,11 @@ if(isset($_POST['reset']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taaza</title>
+    <title>Plateform</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="../assets/css/taaza.css">
+    <link rel="stylesheet" href="../assets/css/plateform.css">
     <link rel="stylesheet" href="../assets/css/media_query.css">
 
     <!-- google font link -->
@@ -239,7 +239,7 @@ if(isset($_POST['reset']))
             <ion-icon name="logo-youtube"></ion-icon>
           </a>
         </div>
-        <p class="copyright">&copy; Copyright 2024 Taaza. All Rights Reserved.</p>
+        <p class="copyright">&copy; Copyright 2024 Plateform. All Rights Reserved.</p>
       </div>
     </footer>
 

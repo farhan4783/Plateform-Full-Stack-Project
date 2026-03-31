@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activateVip'])) {
         exit;
     }
 
-    $conn = new mysqli("localhost", "root", "", "taaza_db");
+    $conn = new mysqli("localhost", "root", "", "plateform_db");
 
     // Check connection
     if ($conn->connect_error) {

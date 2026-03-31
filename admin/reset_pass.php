@@ -14,7 +14,7 @@ if(isset($_GET['email']) && isset($_GET['reset_token']))
         echo '<center>
         <section class="home" id="home">
             <div class="home-left">
-                <div class="container"><br><h1>Taaza</h1><br>
+                <div class="container"><br><h1>Plateform</h1><br>
                     <div class="form-container1">
                         <div class="form-title"><b style="font-size:40px">Reset your password</b></div>
                         <form action="#" method="POST">

@@ -31,7 +31,7 @@ This is a web template that I have created and made available for private use. P
 # How to run
 Create a database, tables, and columns with following details using phpmyadmin (Detailed structure and query given below this box):
 
-    Database name: taaza_db
+    Database name: plateform_db
     Table names: ⦿ admin
                      ↳colum names:  id, email, name, password, resettoken, resettokenexpire, enable_table_booking, enable_menu_page
 
@@ -64,11 +64,11 @@ Create a database, tables, and columns with following details using phpmyadmin (
 
 # Database Structure & creating queries [Table By Table]
         
-        Database name: taaza_db
+        Database name: plateform_db
 
         -------------------------
 
-        CREATE DATABASE taaza_db;
+        CREATE DATABASE plateform_db;
         
 ---------------------------------------------------------------     
         == Table structure for table admin

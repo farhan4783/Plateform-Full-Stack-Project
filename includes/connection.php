@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "taaza_db";
+$dbname = "plateform_db";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -40,7 +40,7 @@ session_start();
           <h1 class="main-heading">We do not cook, we create your emotions!</h1>
 
           <p class="home-text">
-            Your tongue also have it's own dreams. Taaza is the perfect place for your fantasies.
+            Your tongue also have it's own dreams. Plateform is the perfect place for your fantasies.
           </p>
 
           <div class="btn-group">
@@ -109,11 +109,11 @@ session_start();
             you expect</h2>
 
           <p class="section-text">
-            At Taaza, we are more than just a food hub - we're your culinary companions on a delightful journey through flavors, tastes, and experiences. Our passion for food, combined with a commitment to quality and innovation, drives everything we do.<br> We believe in the magic of fresh ingredients, thoughtfully prepared recipes, and the joy of sharing a meal with loved ones. Our chefs are dedicated to crafting dishes that not only tantalize your taste buds but also tell a story. From traditional favorites to modern interpretations, every dish is a testament to our commitment to culinary excellence.
+            At Plateform, we are more than just a food hub - we're your culinary companions on a delightful journey through flavors, tastes, and experiences. Our passion for food, combined with a commitment to quality and innovation, drives everything we do.<br> We believe in the magic of fresh ingredients, thoughtfully prepared recipes, and the joy of sharing a meal with loved ones. Our chefs are dedicated to crafting dishes that not only tantalize your taste buds but also tell a story. From traditional favorites to modern interpretations, every dish is a testament to our commitment to culinary excellence.
           </p>
 
           <p class="section-text">
-            "At Taaza, we offer a comprehensive range of services designed to elevate your dining experience. Whether you're in the mood for delicious food delivered to your doorstep, planning a special event and need the perfect venue, prefer the classic restaurant experience with table booking, or require catering services for your off-site gatherings, Taaza has you covered. Our commitment to excellence extends to constantly innovating and surprising our customers with special promotions, seasonal menus, and exciting culinary events. Join us at Taaza, where every service we provide is aimed at exceeding your expectations and making every moment a memorable one."
+            "At Plateform, we offer a comprehensive range of services designed to elevate your dining experience. Whether you're in the mood for delicious food delivered to your doorstep, planning a special event and need the perfect venue, prefer the classic restaurant experience with table booking, or require catering services for your off-site gatherings, Plateform has you covered. Our commitment to excellence extends to constantly innovating and surprising our customers with special promotions, seasonal menus, and exciting culinary events. Join us at Plateform, where every service we provide is aimed at exceeding your expectations and making every moment a memorable one."
           </p>
 
           <img src="./assets/images/signature.png" alt="signature" class="signature" width="150">
@@ -552,13 +552,13 @@ session_start();
             <ion-icon name="logo-youtube"></ion-icon>
           </a>
         </div>
-        <p class="copyright">&copy; Copyright 2024 Taaza. All Rights Reserved.</p>
+        <p class="copyright">&copy; Copyright 2024 Plateform. All Rights Reserved.</p>
       </div>
     </footer>
   </div>
 
   <!--custom js link -->
-  <script src="./assets/js/taaza.js"></script>
+  <script src="./assets/js/plateform.js"></script>
 
   <!-- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

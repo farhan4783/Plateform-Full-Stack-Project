@@ -24,17 +24,17 @@ function sendMail($email, $verification_code) // Mail sending function starts
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('YourEmail@gmail.com', 'Taaza Restaurant');
+    $mail->setFrom('YourEmail@gmail.com', 'Plateform Restaurant');
     $mail->addAddress($email);     //Add a recipient
 
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Email Verification - Taaza';
+    $mail->Subject = 'Email Verification - Plateform';
     $mail->Body    = "<b style='color:blue'>Thanks for verification !</b><br>
     Click the verify button below to Verify your email address<br>
-    <a href='http://localhost/taaza/verify.php?email=$email&verification_code=$verification_code'>Verify</a>
-    <br><p style='color:red'>Enjoy our services, hearty welcome from Taaza</p>
+    <a href='http://localhost:8000/verify.php?email=$email&verification_code=$verification_code'>Verify</a>
+    <br><p style='color:red'>Enjoy our services, hearty welcome from Plateform</p>
    ";
    // Disable SSL certificate verification, because error occured for me
    $mail->SMTPOptions = array(

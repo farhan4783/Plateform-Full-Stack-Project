@@ -25,17 +25,17 @@ function sendMail($email,$reset_token)
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('YourEmail@gmail.com', 'Taaza Restaurant');
+    $mail->setFrom('YourEmail@gmail.com', 'Plateform Restaurant');
     $mail->addAddress($email);     //Add a recipient
 
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Password reset - Taaza';
+    $mail->Subject = 'Password reset - Plateform';
     $mail->Body    = "<b style='color:blue'>We got a request from you to reset your password !</b><br>
     Click the button below to reset your password<br>
-    <a href='http://localhost/taaza/reset_pass.php?email=$email&reset_token=$reset_token'>Reset password</a>
-    <br><p style='color:red'>Enjoy our services, hearty welcome from Taaza</p>
+    <a href='http://localhost:8000/reset_pass.php?email=$email&reset_token=$reset_token'>Reset password</a>
+    <br><p style='color:red'>Enjoy our services, hearty welcome from Plateform</p>
    ";
    // Disable SSL certificate verification, because error occured for me
    $mail->SMTPOptions = array(

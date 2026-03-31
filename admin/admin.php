@@ -14,7 +14,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
 }
 
 include_once '../includes/connection.php';
-define("APPURL", "http://localhost/taaza");
+define("APPURL", "http://localhost:8000");
 ?>
 
 <?php
@@ -49,7 +49,7 @@ if ($selectUserStmt) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
     
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
-    <title>Admin pannel - Taaza</title>
+    <title>Admin pannel - Plateform</title>
 </head>
 
 <body>
@@ -65,7 +65,7 @@ if ($selectUserStmt) {
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb d-flex justify-content-center align-items-center">
                             <img src="../assets/images/logo.png" alt="logo" width="130">
-                            <li class="breadcrumb-item"><a href="../index.php">Taaza</a></li>
+                            <li class="breadcrumb-item"><a href="../index.php">Plateform</a></li>
                             <li class="breadcrumb-item"><a href="admin-login.php">Admin pannel</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Admin</li>
                            <li style="margin-left: auto;" class="btn btn-outline-primary"><a href="admin-logout.php" class="text-decoration-none">Logout</a></li>
