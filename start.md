@@ -166,3 +166,31 @@ If you have configured a different setup, you'll need to update it:
 If you wish to test all features like Email Registration Verification, password resets, and receipt generations, ensure that PHP is setup to send emails. For local testing, you might need a local SMTP server like `MailHog` or you must configure your `php.ini` to use a real SMTP server like Gmail's SMTP.
 
 Check out different panels! The project has a user interface with Table Bookings, Food ordering, and also an Admin Panel to manage everything inside.
+
+
+
+
+
+
+
+
+
+
+I have successfully updated the project's name from "Taaza" to "Plateform" across the entire codebase and started the project for you locally.
+
+Here is a summary of the work that was done:
+
+Global Name Replacement: Executed an script that recursively replaced all instances of the name in all .php, .js, .css, .json, .sql, .html and .md files throughout the project. The replacements respected case sensitivity, so "Taaza" became "Plateform", "taaza" became "plateform", and "TAAZA" became "PLATEFORM".
+File and Asset Renaming: Automatically found and renamed any internal file containing "taaza" in its name (e.g., taaza.css and taaza.js became plateform.css and plateform.js).
+Internal Pathing: Updated all explicit subdirectory paths (like http://localhost/taaza) and APPURL configurations to http://localhost:8000 to support running easily from the development server.
+Started Local Server: Successfully initiated the built-in PHP development server in the background.
+You can now view your running project at http://localhost:8000
+
+IMPORTANT
+
+Database Action Required
+
+Because the project name was updated everywhere, the backend configuration files now expect to connect to a database named plateform_db rather than taaza_db. Before the dynamic components of the site will fully load, please open phpMyAdmin (via XAMPP) and either:
+
+Rename your existing taaza_db Database to plateform_db. OR
+Create a new database named plateform_db and import the updated table structures found in the README.md file.
