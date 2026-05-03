@@ -11,29 +11,37 @@ const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#38bdf8', '#ef4444'];
 export default function DashboardPage() {
   const [data, setData] = useState(null);
   const [orders, setOrders] = useState([]);
+  const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {
       try {
-        const [analyticsRes, ordersRes] = await Promise.all([
+        const [analyticsRes, ordersRes, bookingsRes] = await Promise.all([
           fetch(`${API}/analytics/overview`),
           fetch(`${API}/orders`),
+          fetch(`${API}/booking`)
         ]);
         const analyticsData = await analyticsRes.json();
         const ordersData = await ordersRes.json();
+        const bookingsData = await bookingsRes.json();
+        
         setData(analyticsData);
         setOrders(ordersData.slice(0, 8));
+        setBookings(bookingsData.slice(0, 5));
       } catch (e) {
         console.error('Failed to load dashboard data:', e);
       } finally {
         setLoading(false);
       }
     }
+    
     load();
+    const interval = setInterval(load, 5000); // Poll every 5s for live updates
+    return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <DashboardSkeleton />;
+  if (loading && !data) return <DashboardSkeleton />;
   if (!data) return <div className="text-red-400 p-8">Failed to connect to backend. Is the server running on port 5000?</div>;
 
   return (
@@ -106,43 +114,68 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Bottom Row: Top Dishes + Recent Orders */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {/* Bottom Row: Top Dishes, Recent Orders, Live Bookings */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Top Dishes */}
         <div className="glass-card p-6">
-          <SectionHeader title="Top Performing Dishes" subtitle="By orders in 30 days" />
+          <SectionHeader title="Top Dishes" subtitle="30 Days" />
           <div className="space-y-3">
-            {data.topDishes.map((dish, i) => (
+            {data.topDishes.slice(0,5).map((dish, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
                 <div className="flex items-center gap-3">
-                  <span className="text-sm font-bold text-[var(--color-text-secondary)] w-6">#{i + 1}</span>
+                  <span className="text-sm font-bold text-[var(--color-text-secondary)] w-5">#{i + 1}</span>
                   <div>
                     <div className="text-sm font-medium text-white">{dish.name}</div>
-                    <div className="text-xs text-[var(--color-text-secondary)]">{dish.category} · ${dish.price}</div>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-semibold text-white">{dish.orders_30d}</div>
-                  <div className="text-xs text-emerald-400 flex items-center gap-0.5"><ArrowUpRight size={10} /> {dish.popularity}%</div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Recent Orders */}
-        <div className="glass-card p-6">
-          <SectionHeader title="Recent Orders" />
+        {/* Live Orders */}
+        <div className="glass-card p-6 border-indigo-500/30 border">
+          <div className="flex justify-between items-center mb-4">
+            <SectionHeader title="Live Orders" />
+            <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
+          </div>
           <div className="space-y-3">
-            {orders.map((order, i) => (
+            {orders.slice(0, 5).map((order, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
                 <div>
-                  <div className="text-sm font-medium text-white">{order.id}</div>
-                  <div className="text-xs text-[var(--color-text-secondary)]">{order.items[0]}</div>
+                  <div className="text-sm font-medium text-white flex items-center gap-2">
+                    {order.customer} <span className="text-[10px] text-indigo-400 bg-indigo-500/10 px-1.5 rounded">{order.id}</span>
+                  </div>
+                  <div className="text-xs text-[var(--color-text-secondary)] truncate w-32">{order.items.join(', ')}</div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-sm font-semibold text-white">${order.total}</span>
+                  <span className="text-sm font-semibold text-white">${order.total.toFixed(2)}</span>
                   <StatusBadge status={order.status} />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Live Bookings */}
+        <div className="glass-card p-6 border-purple-500/30 border">
+          <div className="flex justify-between items-center mb-4">
+            <SectionHeader title="Live Bookings" />
+            <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+          </div>
+          <div className="space-y-3">
+            {bookings.slice().reverse().slice(0, 5).map((booking, i) => (
+              <motion.div key={i} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
+                <div>
+                  <div className="text-sm font-medium text-white">{booking.name}</div>
+                  <div className="text-xs text-[var(--color-text-secondary)]">{booking.date} at {booking.time}</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-sm font-medium text-purple-400">Table {booking.table_id}</div>
+                  <div className="text-xs text-[var(--color-text-secondary)]">{booking.guests} Guests</div>
                 </div>
               </motion.div>
             ))}

@@ -1,116 +1,115 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Brain, Zap, TrendingUp, Users, Bot, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
+import { ChefHat, TrendingUp, Users, ShieldCheck, ArrowRight, Star, Clock, Utensils } from 'lucide-react';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[var(--color-bg-primary)] relative overflow-hidden">
-      {/* Ambient Background */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute top-[-50%] left-[-20%] w-[80%] h-[80%] bg-indigo-600/8 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[-30%] right-[-10%] w-[60%] h-[60%] bg-purple-600/8 rounded-full blur-[100px]" style={{ animationDelay: '2s', animationDuration: '8s' }} />
-      </div>
-
+    <div className="min-h-screen bg-stone-950 font-sans selection:bg-amber-500/30">
       {/* Navbar */}
-      <nav className="relative z-10 flex items-center justify-between px-8 md:px-16 py-5">
+      <nav className="relative z-10 flex items-center justify-between px-8 md:px-16 py-6 border-b border-stone-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-            <Brain size={22} className="text-white" />
+          <div className="w-10 h-10 rounded-full border border-amber-600/30 bg-stone-900 flex items-center justify-center">
+            <ChefHat size={20} className="text-amber-500" />
           </div>
           <div>
-            <h1 className="text-base font-bold tracking-wider text-white">PLATEFORM AI</h1>
-            <p className="text-[9px] text-[var(--color-text-secondary)] tracking-[0.25em]">SMART RESTAURANT OS</p>
+            <h1 className="text-lg font-bold tracking-widest text-stone-100 font-serif">PLATEFORM</h1>
+            <p className="text-[10px] text-stone-500 tracking-[0.2em] uppercase">Restaurant Operations</p>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <Link href="/customer" className="text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors">Customer Portal</Link>
-          <Link href="/dashboard" className="text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors">Admin Dashboard</Link>
-          <Link href="/dashboard" className="text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-xl font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all">
-            Get Started
+        <div className="flex items-center gap-6">
+          <Link href="/customer" className="text-sm font-medium text-stone-400 hover:text-amber-400 transition-colors">Order Online</Link>
+          <Link href="/customer" className="text-sm font-medium text-stone-400 hover:text-amber-400 transition-colors">Reservations</Link>
+          <Link href="/dashboard" className="text-sm font-medium text-stone-400 hover:text-amber-400 transition-colors">Admin Login</Link>
+          <Link href="/dashboard" className="text-sm bg-amber-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-amber-700 transition-colors shadow-lg shadow-amber-900/20">
+            Book Demo
           </Link>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="relative z-10 max-w-6xl mx-auto px-8 pt-20 pb-32 text-center">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-medium px-4 py-1.5 rounded-full mb-6">
-            <Sparkles size={14} /> AI-Powered Restaurant Intelligence
+      <section className="relative z-10 max-w-6xl mx-auto px-8 pt-24 pb-20 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <div className="inline-flex items-center gap-2 border border-amber-900/50 bg-amber-900/10 text-amber-500 text-xs font-semibold px-4 py-1.5 rounded-full mb-8 uppercase tracking-wider">
+            <Star size={14} /> The New Standard in Hospitality
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-            Your Restaurant,<br />
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">On Autopilot.</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-stone-100 leading-tight mb-6 font-serif">
+            Elevate Your <span className="text-amber-500 italic">Service.</span><br />
+            Optimize Your <span className="text-amber-500 italic">Operations.</span>
           </h1>
-          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 leading-relaxed">
-            Plateform AI is not just a management system — it&apos;s an intelligent operating system that predicts demand, optimizes pricing, retains customers, and runs your restaurant while you sleep.
+          <p className="text-lg text-stone-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+            Plateform combines elegant customer-facing interfaces with powerful back-of-house management. From dynamic table routing to intelligent inventory tracking, run your restaurant with precision.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Link href="/dashboard" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:shadow-xl hover:shadow-indigo-500/30 transition-all">
-              Launch Dashboard <ArrowRight size={18} />
+            <Link href="/dashboard" className="inline-flex items-center gap-2 bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-sm hover:bg-amber-700 transition-colors shadow-lg shadow-amber-900/20">
+              Explore Dashboard <ArrowRight size={18} />
             </Link>
-            <a href="#features" className="inline-flex items-center gap-2 border border-[var(--color-border-bright)] text-white px-8 py-3.5 rounded-xl font-medium text-base hover:bg-white/5 transition-all">
-              See Features
-            </a>
+            <Link href="/customer" className="inline-flex items-center gap-2 border border-stone-700 text-stone-300 px-8 py-4 rounded-full font-medium text-sm hover:bg-stone-800 transition-colors">
+              View Customer Portal
+            </Link>
           </div>
         </motion.div>
 
-        {/* Stats Bar */}
+        {/* Realistic Stats Bar */}
         <motion.div 
-          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4"
+          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { label: 'Revenue Boost', value: '+34%', desc: 'Average increase' },
-            { label: 'AI Decisions', value: '12K+', desc: 'Made daily' },
-            { label: 'Churn Reduced', value: '-28%', desc: 'Customer retention' },
-            { label: 'Waste Cut', value: '-40%', desc: 'Inventory optimization' },
+            { label: 'Table Turnaround', value: '45m', desc: 'Average optimized time' },
+            { label: 'Inventory Spoilage', value: '< 2%', desc: 'Industry-leading tracking' },
+            { label: 'Guest Retention', value: '68%', desc: 'Return dining rate' },
+            { label: 'Service Uptime', value: '99.9%', desc: 'Cloud reliability' },
           ].map((stat, i) => (
-            <div key={i} className="glass-card p-5 text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">{stat.value}</div>
-              <div className="text-sm font-medium text-white mt-1">{stat.label}</div>
-              <div className="text-xs text-[var(--color-text-secondary)]">{stat.desc}</div>
+            <div key={i} className="bg-stone-900/50 border border-stone-800 p-6 rounded-2xl text-center">
+              <div className="text-3xl font-serif text-amber-500 mb-2">{stat.value}</div>
+              <div className="text-sm font-semibold text-stone-200 mb-1">{stat.label}</div>
+              <div className="text-xs text-stone-500">{stat.desc}</div>
             </div>
           ))}
         </motion.div>
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="relative z-10 max-w-6xl mx-auto px-8 pb-32">
+      <section className="relative z-10 max-w-6xl mx-auto px-8 py-20 border-t border-stone-800">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-3">Intelligent Modules</h2>
-          <p className="text-[var(--color-text-secondary)]">Every tool a restaurant needs, powered by AI.</p>
+          <h2 className="text-3xl font-bold text-stone-100 mb-4 font-serif">Comprehensive Restaurant Management</h2>
+          <p className="text-stone-400">Everything you need to deliver an exceptional dining experience.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: Bot, title: 'AI Chef Recommender', desc: 'Personalized dish suggestions based on customer mood, diet, and spending patterns.', color: 'indigo' },
-            { icon: TrendingUp, title: 'Dynamic Pricing AI', desc: 'Real-time price optimization based on demand curves, competition, and profit margins.', color: 'emerald' },
-            { icon: Users, title: 'Customer Digital Twin', desc: 'Behavioral profiles, churn prediction, and automated retention campaigns.', color: 'sky' },
-            { icon: Zap, title: 'Autopilot Mode', desc: 'One-click business optimization: pricing, marketing, staffing, and inventory.', color: 'amber' },
-            { icon: Brain, title: 'Demand Prediction', desc: 'Predict busy hours, staff requirements, and ingredient needs days in advance.', color: 'purple' },
-            { icon: ShieldCheck, title: 'Feedback Intelligence', desc: 'Sentiment analysis on reviews with AI-generated response suggestions.', color: 'pink' },
+            { icon: Utensils, title: 'Menu Engineering', desc: 'Analyze dish profitability and popularity to curate the perfect seasonal offerings.' },
+            { icon: Clock, title: 'Real-Time Ticketing', desc: 'Seamless communication between front-of-house and kitchen staff for faster service.' },
+            { icon: Users, title: 'Guest Profiles', desc: 'Track dietary restrictions, favorite wines, and anniversary dates to personalize service.' },
+            { icon: TrendingUp, title: 'Revenue Analytics', desc: 'Detailed breakdowns of category sales, peak hours, and server performance metrics.' },
+            { icon: ShieldCheck, title: 'Secure Payments', desc: 'Enterprise-grade encryption for all transactions, supporting split checks and mobile pay.' },
+            { icon: ChefHat, title: 'Inventory Control', desc: 'Automated stock depletion tracking tied directly to your Point of Sale recipes.' },
           ].map((feature, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="glass-card p-6 group cursor-pointer"
-            >
-              <div className={`w-10 h-10 rounded-xl bg-${feature.color}-500/10 flex items-center justify-center mb-4`}>
-                <feature.icon size={20} className={`text-${feature.color}-400`} />
+            <div key={i} className="bg-stone-900 border border-stone-800 p-8 rounded-2xl group hover:border-amber-900/50 transition-colors">
+              <div className="w-12 h-12 rounded-full bg-stone-950 border border-stone-800 flex items-center justify-center mb-6 group-hover:bg-amber-900/20 group-hover:border-amber-700/50 transition-colors">
+                <feature.icon size={22} className="text-amber-500" />
               </div>
-              <h3 className="text-base font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{feature.desc}</p>
-            </motion.div>
+              <h3 className="text-lg font-semibold text-stone-200 mb-3 font-serif">{feature.title}</h3>
+              <p className="text-sm text-stone-400 leading-relaxed">{feature.desc}</p>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-[var(--color-border)] py-8 text-center">
-        <p className="text-sm text-[var(--color-text-secondary)]">&copy; 2026 Plateform AI. Built for the future of dining.</p>
+      <footer className="relative z-10 border-t border-stone-800 bg-stone-950 py-12">
+        <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
+             <ChefHat size={18} className="text-amber-600" />
+             <span className="text-stone-300 font-serif font-bold tracking-wider">PLATEFORM</span>
+          </div>
+          <div className="flex gap-6 text-sm text-stone-500">
+            <a href="#" className="hover:text-amber-500 transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-amber-500 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-amber-500 transition-colors">Contact Sales</a>
+          </div>
+          <p className="text-sm text-stone-600">&copy; 2026 Plateform Hospitality Solutions.</p>
+        </div>
       </footer>
     </div>
   );
