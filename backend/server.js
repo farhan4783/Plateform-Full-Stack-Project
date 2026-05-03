@@ -6,6 +6,7 @@ import menuRoutes from './routes/menu.js';
 import analyticsRoutes from './routes/analytics.js';
 import bookingRoutes from './routes/booking.js';
 import ordersRoutes from './routes/orders.js';
+import uploadRoutes from './routes/upload.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -22,6 +23,7 @@ app.use('/api/menu', menuRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/booking', bookingRoutes);
 app.use('/api/orders', ordersRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

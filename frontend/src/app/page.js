@@ -24,7 +24,8 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="/dashboard" className="text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors">Dashboard</Link>
+          <Link href="/customer" className="text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors">Customer Portal</Link>
+          <Link href="/dashboard" className="text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors">Admin Dashboard</Link>
           <Link href="/dashboard" className="text-sm bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-xl font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all">
             Get Started
           </Link>

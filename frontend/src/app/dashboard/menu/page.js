@@ -1,8 +1,8 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeader, StatusBadge } from '../../../components/UIComponents';
-import { UtensilsCrossed, Flame, TrendingUp } from 'lucide-react';
+import { UtensilsCrossed, Flame, TrendingUp, Upload } from 'lucide-react';
 
 const API = 'http://localhost:5000/api';
 
@@ -10,26 +10,79 @@ export default function MenuPage() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('All');
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef(null);
 
-  useEffect(() => {
+  const fetchMenu = () => {
+    setLoading(true);
     fetch(`${API}/menu`)
       .then(r => r.json())
       .then(d => { setItems(d); setLoading(false); })
       .catch(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    fetchMenu();
   }, []);
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setUploading(true);
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const res = await fetch(`${API}/upload/excel`, {
+        method: 'POST',
+        body: formData
+      });
+      if (res.ok) {
+        alert('Menu uploaded successfully!');
+        fetchMenu();
+      } else {
+        alert('Failed to upload menu.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error uploading menu.');
+    }
+    setUploading(false);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
 
   const categories = ['All', ...new Set(items.map(i => i.category))];
   const filtered = filter === 'All' ? items : items.filter(i => i.category === filter);
 
-  if (loading) return <div className="grid grid-cols-3 gap-4">{[...Array(6)].map((_, i) => <div key={i} className="skeleton h-60 rounded-2xl" />)}</div>;
+  if (loading && items.length === 0) return <div className="grid grid-cols-3 gap-4">{[...Array(6)].map((_, i) => <div key={i} className="skeleton h-60 rounded-2xl" />)}</div>;
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-white flex items-center gap-3">
-          <UtensilsCrossed className="text-amber-400" /> Menu Intelligence
-        </h1>
-        <p className="text-sm text-[var(--color-text-secondary)] mt-1">AI-analyzed performance data for every dish on your menu.</p>
+      <div className="mb-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-2xl font-bold text-white flex items-center gap-3">
+            <UtensilsCrossed className="text-amber-400" /> Menu Intelligence
+          </h1>
+          <p className="text-sm text-[var(--color-text-secondary)] mt-1">AI-analyzed performance data for every dish on your menu.</p>
+        </div>
+        
+        <div>
+          <input 
+            type="file" 
+            accept=".xlsx, .xls, .csv" 
+            className="hidden" 
+            ref={fileInputRef} 
+            onChange={handleFileUpload} 
+          />
+          <button 
+            onClick={() => fileInputRef.current.click()}
+            disabled={uploading}
+            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all"
+          >
+            <Upload size={16} /> {uploading ? 'Uploading...' : 'Import Excel'}
+          </button>
+        </div>
       </div>
 
       {/* Category Filter */}
