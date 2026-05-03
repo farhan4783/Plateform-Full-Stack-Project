@@ -136,7 +136,7 @@ export default function CustomerPortal() {
 
         <div className="flex items-center gap-4">
           <div className="text-sm text-stone-400 flex items-center gap-2">
-            <User size={16} /> {customer.name}
+            <User size={16} /> {customer?.name}
           </div>
           <button onClick={logout} className="text-stone-500 hover:text-red-400 transition-colors p-2" title="Sign Out">
             <LogOut size={18} />
