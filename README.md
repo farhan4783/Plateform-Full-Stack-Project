@@ -1,43 +1,45 @@
-# Project Plateform - V2 Premium Upgrade
+# Plateform - Smart Restaurant OS
 
-Welcome to the newly upgraded Project Plateform! We've completed a full migration from the legacy PHP application to a modern, architecture.
+Welcome to **Plateform**, a premium, enterprise-grade restaurant management operating system. Plateform bridges the gap between back-of-house operations and customer-facing experiences, providing a seamless, real-time ecosystem for modern hospitality.
 
-## 🚀 Architecture Changes
+## 🚀 Key Features
 
-1. **Frontend (`/client`)**: 
-   - Converted to pure HTML5, CSS3, and Vanilla JavaScript.
-   - Designed with an ultra-premium "Glassmorphism" aesthetic.
-   - Features dynamic aurora backgrounds, hover animations, and smooth scrolling.
+*   **Customer Portal:** A sleek, mobile-responsive web app where authenticated users can view seasonal menus, add items to their cart, and secure table reservations.
+*   **Live Admin Dashboard:** A comprehensive command center for restaurant staff featuring real-time polling. Watch orders and reservations appear live without refreshing the page.
+*   **Analytics & KPIs:** Visualized business intelligence including revenue trends, category mixes, and top-performing dishes.
+*   **Premium Aesthetic:** Designed with a sophisticated "Stone and Amber" color palette, evoking the feel of a high-end bistro.
 
-2. **Backend (`/server`)**:
-   - Converted from PHP/MySQL to Node.js / Express.
-   - Implemented an embedded SQLite database (`taaza.db`) for lightweight, zero-configuration local data storage.
-   - Exposes clean RESTful APIs for the frontend.
+## 🛠️ Tech Stack
 
-## 🤖 New AI Feature: The "AI Chef"
-We have added a dedicated section where users can consult our **AI Chef**.
-- **How it works:** Users input their current mood (e.g., "Energetic", "Relaxed") and any dietary restrictions (e.g., "Vegan").
-- **Backend Processing:** The backend simulates an advanced AI model (with artificial delay) to recommend the absolute best dish from the database, matching the user's emotional and physical profile.
-- **UI:** A beautiful chat-like interface that mimics a conversation with an AI agent.
+*   **Frontend:** Next.js (App Router), React, Tailwind CSS, Framer Motion (Animations), Recharts (Data Visualization), Lucide React (Icons).
+*   **Backend:** Node.js, Express.js, Cors, Multer & XLSX (for Excel menu imports).
+*   **Architecture:** Decoupled RESTful API with an in-memory data store for rapid prototyping.
 
-## ✨ New Unique Feature: Interactive Table Map
-Instead of a boring form, users can now book tables through a visual **Interactive Digital Layout**.
-- Visual representation of the VIP Lounge and Main Dining areas.
-- Clickable nodes that highlight and automatically populate the reservation form.
-- Direct integration with the new Node.js backend to securely save reservations.
+## 🏃‍♂️ Getting Started
 
-## 🛠️ How to run the new project
+### Prerequisites
+*   Node.js (v18 or higher recommended)
+*   npm
 
-1. **Start the Backend:**
-   ```bash
-   cd server
-   npm install
-   npm start
-   ```
-   *The server will run on http://localhost:5000 and auto-initialize the SQLite database with sample menu items.*
+### 1. Start the Backend
 
-2. **Start the Frontend:**
-   - Simply open the `client/index.html` file in any modern web browser.
-   - Alternatively, use an extension like **Live Server** in VS Code to run it dynamically.
+Open a terminal and navigate to the `backend` directory:
+```bash
+cd backend
+npm install
+npm start
+```
+The backend API will run on `http://localhost:5000`.
 
-Enjoy the new, highly interactive, and futuristic experience!
+### 2. Start the Frontend
+
+Open a new terminal and navigate to the `frontend` directory:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+The frontend will be available at `http://localhost:3000`.
+
+## 📖 Documentation
+For a complete, in-depth technical overview of the project architecture, features, and API endpoints, please see the [details.md](./details.md) file.
